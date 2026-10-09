@@ -31,44 +31,44 @@ Quy ước: [ ] chưa viết, [x] đã viết
 Áp dụng vào Online Boutique: Tách toàn bộ biến môi trường của cartservice và redis-cart sang ConfigMap/Secret; lưu trữ giỏ hàng bền vững với StatefulSet và PVC.
 
 - [x] Bài 12 | ConfigMap: Tách rời cấu hình khỏi mã nguồn | Nạp cấu hình ứng dụng động qua biến môi trường và file mount mà không cần build lại image | Bài 09 | Truyền cấu hình cổng và endpoint cho frontend Online Boutique qua ConfigMap | 2.0 giờ | CKAD, CKA
-- [ ] Bài 13 | Secret: Quản lý thông tin nhạy cảm | Lưu trữ mật khẩu, API key, chứng chỉ TLS và hiểu rõ giới hạn an toàn của Base64 | Bài 12 | Tạo và gắn Secret an toàn cho cartservice dưới dạng volume mount | 2.0 giờ | CKAD, CKA, CKS
-- [ ] Bài 14 | Ephemeral Volumes: Lưu trữ tạm thời với emptyDir & hostPath | Sử dụng volume tạm để chia sẻ dữ liệu giữa các container trong Pod và lưu cache | Bài 06, Bài 12 | Dùng emptyDir làm thư mục đệm dùng chung giữa 2 container | 1.5 giờ | CKAD, CKA
-- [ ] Bài 15 | PersistentVolume (PV) & PersistentVolumeClaim (PVC) | Hiểu hợp đồng phân tách lưu trữ giữa người cấp phát hạ tầng và người sử dụng | Bài 14 | Tạo PVC xin dung lượng lưu trữ cho redis-cart và kiểm tra dữ liệu sống sót khi xóa Pod | 3.0 giờ | CKA
-- [ ] Bài 16 | StorageClass & Dynamic Volume Provisioning | Tự động hóa hoàn toàn việc cấp phát ổ đĩa ảo theo yêu cầu qua StorageClass | Bài 15 | Khai thác local-path provisioner trên kind để cấp phát PV tự động từ PVC | 2.5 giờ | CKA
-- [ ] Bài 17 | StatefulSet & Headless Service: Triển khai ứng dụng có trạng thái | Phân biệt ứng dụng Stateful với Stateless, quản lý định danh mạng cố định và ổ đĩa độc lập | Bài 10, Bài 16 | Triển khai cụm redis-cart có trạng thái với StatefulSet và Headless Service | 3.5 giờ | CKAD, CKA
+- [x] Bài 13 | Secret: Quản lý thông tin nhạy cảm | Lưu trữ mật khẩu, API key, chứng chỉ TLS và hiểu rõ giới hạn an toàn của Base64 | Bài 12 | Tạo và gắn Secret an toàn cho cartservice dưới dạng volume mount | 2.0 giờ | CKAD, CKA, CKS
+- [x] Bài 14 | Ephemeral Volumes: Lưu trữ tạm thời với emptyDir & hostPath | Sử dụng volume tạm để chia sẻ dữ liệu giữa các container trong Pod và lưu cache | Bài 06, Bài 12 | Dùng emptyDir làm thư mục đệm dùng chung giữa 2 container | 1.5 giờ | CKAD, CKA
+- [x] Bài 15 | PersistentVolume (PV) & PersistentVolumeClaim (PVC) | Hiểu hợp đồng phân tách lưu trữ giữa người cấp phát hạ tầng và người sử dụng | Bài 14 | Tạo PVC xin dung lượng lưu trữ cho redis-cart và kiểm tra dữ liệu sống sót khi xóa Pod | 3.0 giờ | CKA
+- [x] Bài 16 | StorageClass & Dynamic Volume Provisioning | Tự động hóa hoàn toàn việc cấp phát ổ đĩa ảo theo yêu cầu qua StorageClass | Bài 15 | Khai thác local-path provisioner trên kind để cấp phát PV tự động từ PVC | 2.5 giờ | CKA
+- [x] Bài 17 | StatefulSet & Headless Service: Triển khai ứng dụng có trạng thái | Phân biệt ứng dụng Stateful với Stateless, quản lý định danh mạng cố định và ổ đĩa độc lập | Bài 10, Bài 16 | Triển khai cụm redis-cart có trạng thái với StatefulSet và Headless Service | 3.5 giờ | CKAD, CKA
 
 ---
 
 ## Giai đoạn 4: Mạng: DNS, Ingress/Gateway API, NetworkPolicy, CNI
 Áp dụng vào Online Boutique: Cấu hình Ingress truy cập frontend từ máy host; áp dụng NetworkPolicy thiết lập Zero Trust chỉ cho phép luồng gọi hợp lệ giữa các service.
 
-- [ ] Bài 18 | Mô hình mạng phẳng & CNI (Container Network Interface) | Hiểu quy tắc định tuyến mọi Pod đều có IP riêng và cơ chế vận hành của plugin CNI | Bài 10 | Truy vết gói tin đi qua veth pair và kiểm tra bảng định tuyến giữa các node kind | 2.5 giờ | CKA
-- [ ] Bài 19 | CoreDNS & Service Discovery nội bộ | Nắm vững cách K8s phân giải tên miền dịch vụ nội bộ và cơ chế cấu hình DNS client của Pod | Bài 18 | Debug lỗi mất kết nối dịch vụ do DNS timeout và cấu hình CoreDNS tùy biến | 2.0 giờ | CKA, CKAD
-- [ ] Bài 20 | Ingress & Ingress Controller: Mở cửa đón lưu lượng HTTP/HTTPS | Định tuyến tên miền và đường dẫn URL vào các Service nội bộ chỉ qua một điểm tiếp nhận | Bài 10 | Cài ingress-nginx trên kind và cấu hình routing truy cập frontend Online Boutique | 3.0 giờ | CKA, CKAD
-- [ ] Bài 21 | Gateway API: Chuẩn mực định tuyến thế hệ mới | Nắm bắt kiến trúc định tuyến phân quyền thay thế Ingress với GatewayClass, Gateway và HTTPRoute | Bài 20 | Cấu hình HTTPRoute thực hiện traffic splitting giữa hai phiên bản ứng dụng | 2.5 giờ | Nâng cao
-- [ ] Bài 22 | NetworkPolicy: Tường lửa cô lập mạng nội bộ theo Zero Trust | Kiểm soát luồng traffic vào/ra giữa các Pod, ngăn ngừa nguy cơ di chuyển ngang khi bị tấn công | Bài 18 | Viết NetworkPolicy chặn toàn bộ traffic đến redis-cart ngoại trừ cartservice | 2.5 giờ | CKA, CKAD, CKS
-- [ ] Bài 23 | Debug sự cố mạng: Phương pháp luận từ Pod đến Node | Xây dựng quy trình xử lý lỗi mạng có hệ thống từ DNS, iptables/kube-proxy đến CNI | Bài 18 - 22 | Dùng ephemeral debug container giải quyết tình huống đứt kết nối mạng giả lập | 3.0 giờ | CKA, CKS
+- [x] Bài 18 | Mô hình mạng phẳng & CNI (Container Network Interface) | Hiểu quy tắc định tuyến mọi Pod đều có IP riêng và cơ chế vận hành của plugin CNI | Bài 10 | Truy vết gói tin đi qua veth pair và kiểm tra bảng định tuyến giữa các node kind | 2.5 giờ | CKA
+- [x] Bài 19 | CoreDNS & Service Discovery nội bộ | Nắm vững cách K8s phân giải tên miền dịch vụ nội bộ và cơ chế cấu hình DNS client của Pod | Bài 18 | Debug lỗi mất kết nối dịch vụ do DNS timeout và cấu hình CoreDNS tùy biến | 2.0 giờ | CKA, CKAD
+- [x] Bài 20 | Ingress & Ingress Controller: Mở cửa đón lưu lượng HTTP/HTTPS | Định tuyến tên miền và đường dẫn URL vào các Service nội bộ chỉ qua một điểm tiếp nhận | Bài 10 | Cài ingress-nginx trên kind và cấu hình routing truy cập frontend Online Boutique | 3.0 giờ | CKA, CKAD
+- [x] Bài 21 | Gateway API: Chuẩn mực định tuyến thế hệ mới | Nắm bắt kiến trúc định tuyến phân quyền thay thế Ingress với GatewayClass, Gateway và HTTPRoute | Bài 20 | Cấu hình HTTPRoute thực hiện traffic splitting giữa hai phiên bản ứng dụng | 2.5 giờ | Nâng cao
+- [x] Bài 22 | NetworkPolicy: Tường lửa cô lập mạng nội bộ theo Zero Trust | Kiểm soát luồng traffic vào/ra giữa các Pod, ngăn ngừa nguy cơ di chuyển ngang khi bị tấn công | Bài 18 | Viết NetworkPolicy chặn toàn bộ traffic đến redis-cart ngoại trừ cartservice | 2.5 giờ | CKA, CKAD, CKS
+- [x] Bài 23 | Debug sự cố mạng: Phương pháp luận từ Pod đến Node | Xây dựng quy trình xử lý lỗi mạng có hệ thống từ DNS, iptables/kube-proxy đến CNI | Bài 18 - 22 | Dùng ephemeral debug container giải quyết tình huống đứt kết nối mạng giả lập | 3.0 giờ | CKA, CKS
 
 ---
 
 ## Giai đoạn 5: Lập lịch và tài nguyên: requests/limits, scheduler, taints/tolerations, affinity, HPA/VPA, autoscaling
 Áp dụng vào Online Boutique: Đặt requests/limits khoa học cho frontend và cartservice; cấu hình Pod Anti-Affinity rải đều qua các node; thiết lập HPA tự co giãn frontend.
 
-- [ ] Bài 24 | Resource Requests & Limits, QoS Classes | Phân biệt cơ chế lập lịch theo Request và siết tài nguyên theo Limit, tránh OOMKilled và CPU Throttling | Bài 09 | Cố tình làm container bị OOMKilled do vượt RAM và kiểm tra các cấp độ QoS | 2.5 giờ | CKAD, CKA
-- [ ] Bài 25 | Kube-Scheduler: Thuật toán lọc (Filter) và chấm điểm (Score) | Hiểu sâu quy trình Scheduler chọn node tối ưu cho Pod và cách xử lý khi Pod dính Pending | Bài 05, Bài 24 | Giả lập tình huống cạn tài nguyên node và điều tra event từ Scheduler | 2.0 giờ | CKA
-- [ ] Bài 26 | Node Affinity & Pod Anti-Affinity: Điều khiển phân bố Pod | Điều hướng Pod vào đúng nhóm phần cứng và phân tán các bản sao để đảm bảo tính sẵn sàng cao | Bài 07, Bài 25 | Dùng Pod Anti-Affinity rải các Pod frontend không nằm chung node | 2.5 giờ | CKAD, CKA
-- [ ] Bài 27 | Taints & Tolerations: Xua đuổi và dung thứ trên Node | Dành riêng nhóm node cho tải chuyên biệt và ngăn chặn Pod thông thường chen chân | Bài 26 | Đặt Taint lên worker node và cấp Toleration cho Pod đặc quyền chạy độc quyền | 2.0 giờ | CKAD, CKA
-- [ ] Bài 28 | Horizontal Pod Autoscaler (HPA): Tự động co giãn số lượng Pod | Thiết lập cơ chế tự động tăng/giảm bản sao theo mức tiêu thụ CPU thực tế qua Metrics Server | Bài 09, Bài 24 | Cài metrics-server, bơm tải HTTP vào frontend và quan sát HPA scale-out Pod | 3.0 giờ | CKAD, CKA
-- [ ] Bài 29 | Vertical Pod Autoscaler (VPA) & Tối ưu hóa kích cỡ Pod | Tự động tính toán khuyến nghị và điều chỉnh requests/limits phù hợp với tải thực tế | Bài 28 | Cài VPA chế độ Recommendation để tối ưu cấu hình tài nguyên cho Online Boutique | 3.0 giờ | Best Practice
+- [x] Bài 24 | Resource Requests & Limits, QoS Classes | Phân biệt cơ chế lập lịch theo Request và siết tài nguyên theo Limit, tránh OOMKilled và CPU Throttling | Bài 09 | Cố tình làm container bị OOMKilled do vượt RAM và kiểm tra các cấp độ QoS | 2.5 giờ | CKAD, CKA
+- [x] Bài 25 | Kube-Scheduler: Thuật toán lọc (Filter) và chấm điểm (Score) | Hiểu sâu quy trình Scheduler chọn node tối ưu cho Pod và cách xử lý khi Pod dính Pending | Bài 05, Bài 24 | Giả lập tình huống cạn tài nguyên node và điều tra event từ Scheduler | 2.0 giờ | CKA
+- [x] Bài 26 | Node Affinity & Pod Anti-Affinity: Điều khiển phân bố Pod | Điều hướng Pod vào đúng nhóm phần cứng và phân tán các bản sao để đảm bảo tính sẵn sàng cao | Bài 07, Bài 25 | Dùng Pod Anti-Affinity rải các Pod frontend không nằm chung node | 2.5 giờ | CKAD, CKA
+- [x] Bài 27 | Taints & Tolerations: Xua đuổi và dung thứ trên Node | Dành riêng nhóm node cho tải chuyên biệt và ngăn chặn Pod thông thường chen chân | Bài 26 | Đặt Taint lên worker node và cấp Toleration cho Pod đặc quyền chạy độc quyền | 2.0 giờ | CKAD, CKA
+- [x] Bài 28 | Horizontal Pod Autoscaler (HPA): Tự động co giãn số lượng Pod | Thiết lập cơ chế tự động tăng/giảm bản sao theo mức tiêu thụ CPU thực tế qua Metrics Server | Bài 09, Bài 24 | Cài metrics-server, bơm tải HTTP vào frontend và quan sát HPA scale-out Pod | 3.0 giờ | CKAD, CKA
+- [x] Bài 29 | Vertical Pod Autoscaler (VPA) & Tối ưu hóa kích cỡ Pod | Tự động tính toán khuyến nghị và điều chỉnh requests/limits phù hợp với tải thực tế | Bài 28 | Cài VPA chế độ Recommendation để tối ưu cấu hình tài nguyên cho Online Boutique | 3.0 giờ | Best Practice
 
 ---
 
 ## Giai đoạn 6: Bảo mật: RBAC, ServiceAccount, Pod Security, secret management, supply chain
 Áp dụng vào Online Boutique: Áp dụng Pod Security Standards cấp Restricted cho namespace; khóa chặt SecurityContext cho từng container; quét CVE các image bằng Trivy.
 
-- [ ] Bài 30 | Authentication & Phân quyền RBAC | Quản trị quyền hạn chặt chẽ theo nguyên tắc quyền tối thiểu bằng Role, ClusterRole và Binding | Bài 11 | Tạo tài khoản người dùng giới hạn chỉ được xem log trong namespace dev-boutique | 3.0 giờ | CKA, CKS
-- [ ] Bài 31 | ServiceAccount & Projected Tokens | Cấp phát danh tính an toàn cho ứng dụng gọi API Server với token tự động xoay vòng | Bài 30 | Cấu hình ServiceAccount cho ứng dụng tự truy vấn danh sách Pod trong namespace | 2.5 giờ | CKA, CKS
-- [ ] Bài 32 | Pod Security Standards (PSS) & Admission (PSA) | Chuẩn hóa an toàn container ở cấp namespace với 3 mức Privileged, Baseline và Restricted | Bài 11 | Bật nhãn PSA restricted và quan sát K8s từ chối các manifest vi phạm quy chuẩn | 2.5 giờ | CKS
+- [x] Bài 30 | Authentication & Phân quyền RBAC | Quản trị quyền hạn chặt chẽ theo nguyên tắc quyền tối thiểu bằng Role, ClusterRole và Binding | Bài 11 | Tạo tài khoản người dùng giới hạn chỉ được xem log trong namespace dev-boutique | 3.0 giờ | CKA, CKS
+- [x] Bài 31 | ServiceAccount & Projected Tokens | Cấp phát danh tính an toàn cho ứng dụng gọi API Server với token tự động xoay vòng | Bài 30 | Cấu hình ServiceAccount cho ứng dụng tự truy vấn danh sách Pod trong namespace | 2.5 giờ | CKA, CKS
+- [x] Bài 32 | Pod Security Standards (PSS) & Admission (PSA) | Chuẩn hóa an toàn container ở cấp namespace với 3 mức Privileged, Baseline và Restricted | Bài 11 | Bật nhãn PSA restricted và quan sát K8s từ chối các manifest vi phạm quy chuẩn | 2.5 giờ | CKS
 - [ ] Bài 33 | SecurityContext: Siết chặt an toàn tiến trình cấp Linux Kernel | Khóa chặt container: cấm chạy quyền root, bật readOnlyRootFilesystem và gỡ bỏ Capabilities | Bài 01, Bài 32 | Cấu hình SecurityContext toàn diện cho frontend Online Boutique chạy non-root | 3.0 giờ | CKAD, CKS
 - [ ] Bài 34 | Quản lý Secret chuẩn Enterprise với External Secrets Operator | Chống lộ mật khẩu trong Git bằng cách đồng bộ an toàn từ kho bí mật tập trung | Bài 13 | Cài External Secrets Operator (bản rút gọn cho 8GB) đồng bộ secret giả lập | 3.5 giờ | CKS
 - [ ] Bài 35 | Bảo mật chuỗi cung ứng: Quét lỗ hổng Image bằng Trivy | Tích hợp kiểm tra bảo mật hình ảnh container, ngăn chặn image chứa mã độc và CVE nguy hiểm | Bài 02 | Dùng Trivy quét image các microservice trong Online Boutique và phân tích báo cáo | 3.0 giờ | CKS
