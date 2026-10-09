@@ -18,19 +18,19 @@ Quy ước: [ ] chưa viết, [x] đã viết
 Áp dụng vào Online Boutique: Triển khai 2 dịch vụ độc lập (frontend và productcatalogservice) lên cluster kind bằng Pod, ReplicaSet, Deployment, Service và Namespace.
 
 - [x] Bài 05 | Kiến trúc Kubernetes: Control Plane, Worker Node & Vòng lặp hòa giải | Nắm vững vai trò các thành phần cốt lõi và nguyên lý chuyển dịch từ Actual State về Desired State | Bài 04 | Quan sát luồng tương tác giữa API Server, Scheduler, Kubelet khi tạo tài nguyên | 2.5 giờ | CKA
-- [ ] Bài 06 | Pod: Đơn vị tính toán nguyên tử & Multi-container | Hiểu vòng đời Pod và cách chạy nhiều container chia sẻ chung mạng/bộ nhớ (Sidecar pattern) | Bài 05 | Triển khai Pod chứa container chính và sidecar ghi log | 2.5 giờ | CKAD, CKA
-- [ ] Bài 07 | Labels, Selectors & Annotations: Xương sống định tuyến | Làm chủ cơ chế nhóm và ghép nối tài nguyên lỏng lẻo (loose coupling) trong Kubernetes | Bài 06 | Gắn nhãn và dùng selector lọc tài nguyên có điều kiện | 1.5 giờ | CKAD, CKA
-- [ ] Bài 08 | ReplicaSet: Đảm bảo số lượng bản sao | Hiểu cơ chế tự phục hồi số lượng Pod mong muốn và lý do không chạy Pod trần ở production | Bài 07 | Tạo ReplicaSet, cố tình xóa Pod và quan sát Pod mới tự sinh | 1.5 giờ | CKAD, CKA
-- [ ] Bài 09 | Deployment: Quản lý triển khai và cập nhật không gián đoạn | Thành thạo kỹ thuật Rolling Update, kiểm soát lịch sử phiên bản và rollback khi có lỗi | Bài 08 | Cập nhật phiên bản frontend Online Boutique và thực hiện rollback tức thì | 3.0 giờ | CKAD, CKA
-- [ ] Bài 10 | Service: Cầu nối mạng bền vững (ClusterIP, NodePort, LoadBalancer) | Nắm vững cách Service cung cấp IP cố định và cân bằng tải nội bộ giữa các Pod biến động | Bài 09 | Tạo ClusterIP kết nối frontend với productcatalogservice và mở NodePort kiểm tra | 3.0 giờ | CKAD, CKA
-- [ ] Bài 11 | Namespace & ResourceQuota cơ bản: Phân chia không gian làm việc | Phân tách môi trường làm việc trên cùng một cluster và kiểm soát tài nguyên tránh tranh chấp | Bài 10 | Tạo namespace dev-boutique và gán hạn ngạch giới hạn số lượng Pod | 2.0 giờ | CKAD, CKA
+- [x] Bài 06 | Pod: Đơn vị tính toán nguyên tử & Multi-container | Hiểu vòng đời Pod và cách chạy nhiều container chia sẻ chung mạng/bộ nhớ (Sidecar pattern) | Bài 05 | Triển khai Pod chứa container chính và sidecar ghi log | 2.5 giờ | CKAD, CKA
+- [x] Bài 07 | Labels, Selectors & Annotations: Xương sống định tuyến | Làm chủ cơ chế nhóm và ghép nối tài nguyên lỏng lẻo (loose coupling) trong Kubernetes | Bài 06 | Gắn nhãn và dùng selector lọc tài nguyên có điều kiện | 1.5 giờ | CKAD, CKA
+- [x] Bài 08 | ReplicaSet: Đảm bảo số lượng bản sao | Hiểu cơ chế tự phục hồi số lượng Pod mong muốn và lý do không chạy Pod trần ở production | Bài 07 | Tạo ReplicaSet, cố tình xóa Pod và quan sát Pod mới tự sinh | 1.5 giờ | CKAD, CKA
+- [x] Bài 09 | Deployment: Quản lý triển khai và cập nhật không gián đoạn | Thành thạo kỹ thuật Rolling Update, kiểm soát lịch sử phiên bản và rollback khi có lỗi | Bài 08 | Cập nhật phiên bản frontend Online Boutique và thực hiện rollback tức thì | 3.0 giờ | CKAD, CKA
+- [x] Bài 10 | Service: Cầu nối mạng bền vững (ClusterIP, NodePort, LoadBalancer) | Nắm vững cách Service cung cấp IP cố định và cân bằng tải nội bộ giữa các Pod biến động | Bài 09 | Tạo ClusterIP kết nối frontend với productcatalogservice và mở NodePort kiểm tra | 3.0 giờ | CKAD, CKA
+- [x] Bài 11 | Namespace & ResourceQuota cơ bản: Phân chia không gian làm việc | Phân tách môi trường làm việc trên cùng một cluster và kiểm soát tài nguyên tránh tranh chấp | Bài 10 | Tạo namespace dev-boutique và gán hạn ngạch giới hạn số lượng Pod | 2.0 giờ | CKAD, CKA
 
 ---
 
 ## Giai đoạn 3: Cấu hình và lưu trữ: ConfigMap, Secret, Volume, PV/PVC, StorageClass, StatefulSet
 Áp dụng vào Online Boutique: Tách toàn bộ biến môi trường của cartservice và redis-cart sang ConfigMap/Secret; lưu trữ giỏ hàng bền vững với StatefulSet và PVC.
 
-- [ ] Bài 12 | ConfigMap: Tách rời cấu hình khỏi mã nguồn | Nạp cấu hình ứng dụng động qua biến môi trường và file mount mà không cần build lại image | Bài 09 | Truyền cấu hình cổng và endpoint cho frontend Online Boutique qua ConfigMap | 2.0 giờ | CKAD, CKA
+- [x] Bài 12 | ConfigMap: Tách rời cấu hình khỏi mã nguồn | Nạp cấu hình ứng dụng động qua biến môi trường và file mount mà không cần build lại image | Bài 09 | Truyền cấu hình cổng và endpoint cho frontend Online Boutique qua ConfigMap | 2.0 giờ | CKAD, CKA
 - [ ] Bài 13 | Secret: Quản lý thông tin nhạy cảm | Lưu trữ mật khẩu, API key, chứng chỉ TLS và hiểu rõ giới hạn an toàn của Base64 | Bài 12 | Tạo và gắn Secret an toàn cho cartservice dưới dạng volume mount | 2.0 giờ | CKAD, CKA, CKS
 - [ ] Bài 14 | Ephemeral Volumes: Lưu trữ tạm thời với emptyDir & hostPath | Sử dụng volume tạm để chia sẻ dữ liệu giữa các container trong Pod và lưu cache | Bài 06, Bài 12 | Dùng emptyDir làm thư mục đệm dùng chung giữa 2 container | 1.5 giờ | CKAD, CKA
 - [ ] Bài 15 | PersistentVolume (PV) & PersistentVolumeClaim (PVC) | Hiểu hợp đồng phân tách lưu trữ giữa người cấp phát hạ tầng và người sử dụng | Bài 14 | Tạo PVC xin dung lượng lưu trữ cho redis-cart và kiểm tra dữ liệu sống sót khi xóa Pod | 3.0 giờ | CKA
