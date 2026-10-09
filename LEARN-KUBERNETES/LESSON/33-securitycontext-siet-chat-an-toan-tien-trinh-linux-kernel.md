@@ -626,3 +626,4 @@ spec:
       - name: redis-data
         emptyDir: {}
 ```
+

@@ -69,54 +69,54 @@ Quy ước: [ ] chưa viết, [x] đã viết
 - [x] Bài 30 | Authentication & Phân quyền RBAC | Quản trị quyền hạn chặt chẽ theo nguyên tắc quyền tối thiểu bằng Role, ClusterRole và Binding | Bài 11 | Tạo tài khoản người dùng giới hạn chỉ được xem log trong namespace dev-boutique | 3.0 giờ | CKA, CKS
 - [x] Bài 31 | ServiceAccount & Projected Tokens | Cấp phát danh tính an toàn cho ứng dụng gọi API Server với token tự động xoay vòng | Bài 30 | Cấu hình ServiceAccount cho ứng dụng tự truy vấn danh sách Pod trong namespace | 2.5 giờ | CKA, CKS
 - [x] Bài 32 | Pod Security Standards (PSS) & Admission (PSA) | Chuẩn hóa an toàn container ở cấp namespace với 3 mức Privileged, Baseline và Restricted | Bài 11 | Bật nhãn PSA restricted và quan sát K8s từ chối các manifest vi phạm quy chuẩn | 2.5 giờ | CKS
-- [ ] Bài 33 | SecurityContext: Siết chặt an toàn tiến trình cấp Linux Kernel | Khóa chặt container: cấm chạy quyền root, bật readOnlyRootFilesystem và gỡ bỏ Capabilities | Bài 01, Bài 32 | Cấu hình SecurityContext toàn diện cho frontend Online Boutique chạy non-root | 3.0 giờ | CKAD, CKS
-- [ ] Bài 34 | Quản lý Secret chuẩn Enterprise với External Secrets Operator | Chống lộ mật khẩu trong Git bằng cách đồng bộ an toàn từ kho bí mật tập trung | Bài 13 | Cài External Secrets Operator (bản rút gọn cho 8GB) đồng bộ secret giả lập | 3.5 giờ | CKS
-- [ ] Bài 35 | Bảo mật chuỗi cung ứng: Quét lỗ hổng Image bằng Trivy | Tích hợp kiểm tra bảo mật hình ảnh container, ngăn chặn image chứa mã độc và CVE nguy hiểm | Bài 02 | Dùng Trivy quét image các microservice trong Online Boutique và phân tích báo cáo | 3.0 giờ | CKS
-- [ ] Bài 36 | Kiểm toán & Giám sát bất thường Runtime: Audit Log & Falco | Ghi vết hành động gọi API và phát hiện hành vi xâm nhập trái phép trong container thời gian thực | Bài 05, Bài 30 | Bật Audit Policy cho API Server và cài Falco (bản rút gọn cho 8GB) bắt sự kiện exec | 3.5 giờ | CKS
+- [x] Bài 33 | SecurityContext: Siết chặt an toàn tiến trình cấp Linux Kernel | Khóa chặt container: cấm chạy quyền root, bật readOnlyRootFilesystem và gỡ bỏ Capabilities | Bài 01, Bài 32 | Cấu hình SecurityContext toàn diện cho frontend Online Boutique chạy non-root | 3.0 giờ | CKAD, CKS
+- [x] Bài 34 | Quản lý Secret chuẩn Enterprise với External Secrets Operator | Chống lộ mật khẩu trong Git bằng cách đồng bộ an toàn từ kho bí mật tập trung | Bài 13 | Cài External Secrets Operator (bản rút gọn cho 8GB) đồng bộ secret giả lập | 3.5 giờ | CKS
+- [x] Bài 35 | Bảo mật chuỗi cung ứng: Quét lỗ hổng Image bằng Trivy | Tích hợp kiểm tra bảo mật hình ảnh container, ngăn chặn image chứa mã độc và CVE nguy hiểm | Bài 02 | Dùng Trivy quét image các microservice trong Online Boutique và phân tích báo cáo | 3.0 giờ | CKS
+- [x] Bài 36 | Kiểm toán & Giám sát bất thường Runtime: Audit Log & Falco | Ghi vết hành động gọi API và phát hiện hành vi xâm nhập trái phép trong container thời gian thực | Bài 05, Bài 30 | Bật Audit Policy cho API Server và cài Falco (bản rút gọn cho 8GB) bắt sự kiện exec | 3.5 giờ | CKS
 
 ---
 
 ## Giai đoạn 7: Quan sát hệ thống: logging, metrics, tracing, alerting, troubleshooting
 Áp dụng vào Online Boutique: Thu thập log tập trung và metrics từ frontend/checkoutservice; tạo dashboard giám sát và diễn tập khắc phục lỗi CrashLoopBackOff, OOMKilled.
 
-- [ ] Bài 37 | Quản lý và tập trung hóa Log: stdout/stderr & Logging Agent | Hiểu cơ chế gom log từ node và chuyển tiếp về kho tập trung bằng kiến trúc DaemonSet nhẹ | Bài 06, Bài 26 | Cài đặt FluentBit thu thập log container đẩy về kho lưu trữ (bản rút gọn cho 8GB) | 3.0 giờ | CKA, CKAD
-- [ ] Bài 38 | Thu thập Metrics: Prometheus & ServiceMonitor | Giám sát sức khỏe hạ tầng và ứng dụng, tự động cào metrics qua ServiceMonitor | Bài 10, Bài 24 | Triển khai Prometheus Operator (bản rút gọn cho 8GB) cào metrics từ frontend | 3.5 giờ | CKA
-- [ ] Bài 39 | Cảnh báo chuẩn SRE: Alertmanager & 4 Golden Signals | Thiết lập cảnh báo chủ động dựa trên độ trễ, lưu lượng, tỷ lệ lỗi và mức độ bão hòa | Bài 38 | Cấu hình Alertmanager (bản rút gọn cho 8GB) bắn cảnh báo khi service lỗi 5xx | 2.5 giờ | Best Practice
-- [ ] Bài 40 | Distributed Tracing với OpenTelemetry & Jaeger | Truy vết đường đi của request qua chuỗi microservices để phát hiện điểm nghẽn độ trễ | Bài 20, Bài 38 | Cài Jaeger (bản rút gọn cho 8GB) và theo dõi hành trình checkout của người dùng | 3.0 giờ | Nâng cao
-- [ ] Bài 41 | Phương pháp luận Troubleshooting: Khung chẩn đoán 5 tầng | Nắm vững quy trình khoanh vùng lỗi có hệ thống: Node -> Control Plane -> Mạng -> Kubelet -> App | Toàn bộ GĐ 2 - 5 | Tham gia bài tập tình huống: Cluster bị lỗi đa tầng và cô lập lỗi trong 15 phút | 3.0 giờ | CKA
-- [ ] Bài 42 | Khắc phục các sự cố kinh điển: CrashLoopBackOff, OOMKilled, Pending | Rèn luyện phản xạ chẩn đoán và khắc phục nhanh các lỗi phổ biến nhất trong vận hành | Bài 41 | Thực hành sửa 4 ca sự cố giả lập trên các service của Online Boutique | 3.5 giờ | CKA, CKAD
+- [x] Bài 37 | Quản lý và tập trung hóa Log: stdout/stderr & Logging Agent | Hiểu cơ chế gom log từ node và chuyển tiếp về kho tập trung bằng kiến trúc DaemonSet nhẹ | Bài 06, Bài 26 | Cài đặt FluentBit thu thập log container đẩy về kho lưu trữ (bản rút gọn cho 8GB) | 3.0 giờ | CKA, CKAD
+- [x] Bài 38 | Thu thập Metrics: Prometheus & ServiceMonitor | Giám sát sức khỏe hạ tầng và ứng dụng, tự động cào metrics qua ServiceMonitor | Bài 10, Bài 24 | Triển khai Prometheus Operator (bản rút gọn cho 8GB) cào metrics từ frontend | 3.5 giờ | CKA
+- [x] Bài 39 | Cảnh báo chuẩn SRE: Alertmanager & 4 Golden Signals | Thiết lập cảnh báo chủ động dựa trên độ trễ, lưu lượng, tỷ lệ lỗi và mức độ bão hòa | Bài 38 | Cấu hình Alertmanager (bản rút gọn cho 8GB) bắn cảnh báo khi service lỗi 5xx | 2.5 giờ | Best Practice
+- [x] Bài 40 | Distributed Tracing với OpenTelemetry & Jaeger | Truy vết đường đi của request qua chuỗi microservices để phát hiện điểm nghẽn độ trễ | Bài 20, Bài 38 | Cài Jaeger (bản rút gọn cho 8GB) và theo dõi hành trình checkout của người dùng | 3.0 giờ | Nâng cao
+- [x] Bài 41 | Phương pháp luận Troubleshooting: Khung chẩn đoán 5 tầng | Nắm vững quy trình khoanh vùng lỗi có hệ thống: Node -> Control Plane -> Mạng -> Kubelet -> App | Toàn bộ GĐ 2 - 5 | Tham gia bài tập tình huống: Cluster bị lỗi đa tầng và cô lập lỗi trong 15 phút | 3.0 giờ | CKA
+- [x] Bài 42 | Khắc phục các sự cố kinh điển: CrashLoopBackOff, OOMKilled, Pending | Rèn luyện phản xạ chẩn đoán và khắc phục nhanh các lỗi phổ biến nhất trong vận hành | Bài 41 | Thực hành sửa 4 ca sự cố giả lập trên các service của Online Boutique | 3.5 giờ | CKA, CKAD
 
 ---
 
 ## Giai đoạn 8: Vận hành production: Helm/Kustomize, GitOps, nâng cấp cluster, backup etcd, HA, multi-cluster, quản lý chi phí
 Áp dụng vào Online Boutique: Đóng gói toàn bộ Online Boutique thành Helm Chart có cấu hình values theo môi trường; quản lý triển khai tự động qua ArgoCD GitOps.
 
-- [ ] Bài 43 | Đóng gói ứng dụng với Helm 3: Chart, Values & Hooks | Chuẩn hóa đóng gói ứng dụng phức tạp thành gói biểu mẫu dễ triển khai và chia sẻ | Bài 09, Bài 10, Bài 12 | Tự viết Helm Chart từ số 0 đóng gói frontend và service phụ thuộc | 3.0 giờ | CKAD
-- [ ] Bài 44 | Quản lý cấu hình đa môi trường bằng Kustomize | Tùy biến cấu hình dev/staging/prod theo dạng overlay mà không cần sửa đổi manifest gốc | Bài 09, Bài 12 | Xây dựng cấu trúc thư mục base/overlays Kustomize cho Online Boutique | 2.5 giờ | CKAD
-- [ ] Bài 45 | Vận hành hạ tầng khai báo (GitOps) với ArgoCD | Đồng bộ trạng thái từ Git lên Cluster tự động, triệt tiêu trôi cấu hình và loại bỏ deploy tay | Bài 43, Bài 44 | Cài ArgoCD (bản rút gọn cho 8GB) tự động sync ứng dụng từ Git repo | 3.5 giờ | Chuẩn Prod
-- [ ] Bài 46 | Sao lưu và phục hồi thảm họa etcd (Disaster Recovery) | Nắm vững kỹ thuật bảo vệ kho dữ liệu cốt lõi, thực hiện snapshot và restore etcd an toàn | Bài 05 | Tạo snapshot etcd, giả lập sự cố xóa sạch tài nguyên và khôi phục hoàn toàn | 3.0 giờ | CKA
-- [ ] Bài 47 | Quy trình nâng cấp Cluster không gián đoạn (Zero-Downtime) | Thành thạo quy trình cordon, drain node và nâng cấp các thành phần bằng kubeadm | Bài 05, Bài 46 | Thực hành thao tác drain và bảo trì worker node trên cluster lab | 3.5 giờ | CKA
-- [ ] Bài 48 | Thiết kế kiến trúc High Availability (HA) & Multi-Cluster | Nắm vững nguyên lý thiết kế cụm HA chịu lỗi đa vùng và chiến lược quản trị nhiều cluster | Bài 47 | Thiết kế sơ đồ kiến trúc HA 3 control-plane và phân tích kịch bản split-brain | 3.0 giờ | CKA, Senior
-- [ ] Bài 49 | Quản lý và tối ưu hóa chi phí Kubernetes (FinOps) | Phân tích lãng phí tài nguyên, rightsizing kích cỡ Pod và chiến lược kết hợp Spot Instance | Bài 24, Bài 29 | Phân tích mức sử dụng CPU/RAM của cluster và lập phương án cắt giảm lãng phí | 2.5 giờ | Senior
+- [x] Bài 43 | Đóng gói ứng dụng với Helm 3: Chart, Values & Hooks | Chuẩn hóa đóng gói ứng dụng phức tạp thành gói biểu mẫu dễ triển khai và chia sẻ | Bài 09, Bài 10, Bài 12 | Tự viết Helm Chart từ số 0 đóng gói frontend và service phụ thuộc | 3.0 giờ | CKAD
+- [x] Bài 44 | Quản lý cấu hình đa môi trường bằng Kustomize | Tùy biến cấu hình dev/staging/prod theo dạng overlay mà không cần sửa đổi manifest gốc | Bài 09, Bài 12 | Xây dựng cấu trúc thư mục base/overlays Kustomize cho Online Boutique | 2.5 giờ | CKAD
+- [x] Bài 45 | Vận hành hạ tầng khai báo (GitOps) với ArgoCD | Đồng bộ trạng thái từ Git lên Cluster tự động, triệt tiêu trôi cấu hình và loại bỏ deploy tay | Bài 43, Bài 44 | Cài ArgoCD (bản rút gọn cho 8GB) tự động sync ứng dụng từ Git repo | 3.5 giờ | Chuẩn Prod
+- [x] Bài 46 | Sao lưu và phục hồi thảm họa etcd (Disaster Recovery) | Nắm vững kỹ thuật bảo vệ kho dữ liệu cốt lõi, thực hiện snapshot và restore etcd an toàn | Bài 05 | Tạo snapshot etcd, giả lập sự cố xóa sạch tài nguyên và khôi phục hoàn toàn | 3.0 giờ | CKA
+- [x] Bài 47 | Quy trình nâng cấp Cluster không gián đoạn (Zero-Downtime) | Thành thạo quy trình cordon, drain node và nâng cấp các thành phần bằng kubeadm | Bài 05, Bài 46 | Thực hành thao tác drain và bảo trì worker node trên cluster lab | 3.5 giờ | CKA
+- [x] Bài 48 | Thiết kế kiến trúc High Availability (HA) & Multi-Cluster | Nắm vững nguyên lý thiết kế cụm HA chịu lỗi đa vùng và chiến lược quản trị nhiều cluster | Bài 47 | Thiết kế sơ đồ kiến trúc HA 3 control-plane và phân tích kịch bản split-brain | 3.0 giờ | CKA, Senior
+- [x] Bài 49 | Quản lý và tối ưu hóa chi phí Kubernetes (FinOps) | Phân tích lãng phí tài nguyên, rightsizing kích cỡ Pod và chiến lược kết hợp Spot Instance | Bài 24, Bài 29 | Phân tích mức sử dụng CPU/RAM của cluster và lập phương án cắt giảm lãng phí | 2.5 giờ | Senior
 
 ---
 
 ## Giai đoạn 9: Nâng cao: CRD, Operator, admission webhook, service mesh, internals (etcd, kube-apiserver, controller loop)
 Áp dụng vào Online Boutique: Viết chính sách Kyverno kiểm duyệt cấu hình container; triển khai Istio Service Mesh điều phối lưu lượng và mã hóa mTLS giữa các microservice.
 
-- [ ] Bài 50 | Đào sâu Kube-APIServer & Optimistic Concurrency Control | Hiểu cơ chế resourceVersion, lưu trữ etcd KV và hàng đợi điều phối API Priority & Fairness | Bài 05, Bài 46 | Mô phỏng tình huống hai tiến trình cùng sửa tài nguyên và xử lý lỗi xung đột 409 | 3.0 giờ | Senior
-- [ ] Bài 51 | Policy-as-Code với Admission Webhook (Kyverno) | Tự động hóa kiểm duyệt và ép buộc tuân thủ quy chuẩn trước khi manifest được ghi vào etcd | Bài 05, Bài 32 | Cài Kyverno (bản rút gọn cho 8GB) bắt buộc mọi Pod phải có nhãn owner và giới hạn RAM | 3.5 giờ | CKS, Senior
-- [ ] Bài 52 | Tự định nghĩa tài nguyên với Custom Resource Definitions (CRD) | Mở rộng vốn từ vựng của Kubernetes API bằng các tài nguyên mang nghiệp vụ riêng | Bài 05, Bài 50 | Tạo CRD MicroserviceConfig kiểm tra tính hợp lệ bằng OpenAPI v3 schema | 2.5 giờ | Senior
-- [ ] Bài 53 | Lập trình Kubernetes Operator với Golang & Kubebuilder | Tự động hóa tri thức vận hành thành code: điều khiển vòng lặp hòa giải Reconcile | Bài 52 | Xây dựng Operator đơn giản tự sinh Deployment và Service khi có Custom Resource | 5.0 giờ | Senior Platform
-- [ ] Bài 54 | Quản trị lưu lượng chuyên sâu với Service Mesh (Istio) | Triển khai mã hóa mTLS tự động giữa các microservice và điều phối lưu lượng Canary thông minh | Bài 18, Bài 20 | Cài Istio (bản rút gọn cho 8GB) phân chia 10% traffic vào phiên bản frontend mới | 4.0 giờ | Senior
-- [ ] Bài 55 | Tối ưu lập lịch nâng cao với Descheduler | Cân bằng lại mật độ Pod trên cluster khi có node mới hoặc khi cụm bị phân bố lệch | Bài 25, Bài 26 | Cài Descheduler chạy quét định kỳ để trục xuất Pod vi phạm phân bố tối ưu | 3.0 giờ | Senior SRE
+- [x] Bài 50 | Đào sâu Kube-APIServer & Optimistic Concurrency Control | Hiểu cơ chế resourceVersion, lưu trữ etcd KV và hàng đợi điều phối API Priority & Fairness | Bài 05, Bài 46 | Mô phỏng tình huống hai tiến trình cùng sửa tài nguyên và xử lý lỗi xung đột 409 | 3.0 giờ | Senior
+- [x] Bài 51 | Policy-as-Code với Admission Webhook (Kyverno) | Tự động hóa kiểm duyệt và ép buộc tuân thủ quy chuẩn trước khi manifest được ghi vào etcd | Bài 05, Bài 32 | Cài Kyverno (bản rút gọn cho 8GB) bắt buộc mọi Pod phải có nhãn owner và giới hạn RAM | 3.5 giờ | CKS, Senior
+- [x] Bài 52 | Tự định nghĩa tài nguyên với Custom Resource Definitions (CRD) | Mở rộng vốn từ vựng của Kubernetes API bằng các tài nguyên mang nghiệp vụ riêng | Bài 05, Bài 50 | Tạo CRD MicroserviceConfig kiểm tra tính hợp lệ bằng OpenAPI v3 schema | 2.5 giờ | Senior
+- [x] Bài 53 | Lập trình Kubernetes Operator với Golang & Kubebuilder | Tự động hóa tri thức vận hành thành code: điều khiển vòng lặp hòa giải Reconcile | Bài 52 | Xây dựng Operator đơn giản tự sinh Deployment và Service khi có Custom Resource | 5.0 giờ | Senior Platform
+- [x] Bài 54 | Quản trị lưu lượng chuyên sâu với Service Mesh (Istio) | Triển khai mã hóa mTLS tự động giữa các microservice và điều phối lưu lượng Canary thông minh | Bài 18, Bài 20 | Cài Istio (bản rút gọn cho 8GB) phân chia 10% traffic vào phiên bản frontend mới | 4.0 giờ | Senior
+- [x] Bài 55 | Tối ưu lập lịch nâng cao với Descheduler | Cân bằng lại mật độ Pod trên cluster khi có node mới hoặc khi cụm bị phân bố lệch | Bài 25, Bài 26 | Cài Descheduler chạy quét định kỳ để trục xuất Pod vi phạm phân bố tối ưu | 3.0 giờ | Senior SRE
 
 ---
 
 ## Giai đoạn 10: Dự án cuối khóa (capstone) mô phỏng production
 Áp dụng vào Online Boutique: Tích hợp toàn diện: vận hành toàn bộ Online Boutique chuẩn Enterprise đáp ứng tiêu chí HA, GitOps, Zero-Trust, Observability và Auto-healing.
 
-- [ ] Bài 56 | Capstone Project: Triển khai Online Boutique chuẩn Production Enterprise | Tổng hợp toàn bộ kỹ năng thiết kế, bảo mật, tự động hóa và xử lý sự cố vào nền tảng hoàn chỉnh | Toàn bộ Bài 01 - 55 | Vận hành Online Boutique hoàn chỉnh (bản rút gọn cho 8GB) kèm GitOps, SSL, HPA, giám sát và chaos test | 15.0 giờ | Tổng hợp CKA/CKAD/CKS
+- [x] Bài 56 | Capstone Project: Triển khai Online Boutique chuẩn Production Enterprise | Tổng hợp toàn bộ kỹ năng thiết kế, bảo mật, tự động hóa và xử lý sự cố vào nền tảng hoàn chỉnh | Toàn bộ Bài 01 - 55 | Vận hành Online Boutique hoàn chỉnh (bản rút gọn cho 8GB) kèm GitOps, SSL, HPA, giám sát và chaos test | 15.0 giờ | Tổng hợp CKA/CKAD/CKS
 
 ---
 
